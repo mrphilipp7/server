@@ -23,7 +23,6 @@ and add the following variables
 ```
 ## connection and development status
 NODE_ENV='development'
-## connection to Prisma
 MONGODB_URI='uri to mongodb'
 ```
 
