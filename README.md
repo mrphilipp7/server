@@ -28,7 +28,7 @@ MONGODB_URI='uri to mongodb'
 
 ## Running application
 
-Make sure you have the latest build version available for the server
+Make sure you have the latest build version available for the server.
 Run a build in the directory before running in production mode
 
 ```
