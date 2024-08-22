@@ -23,3 +23,8 @@ export const updateUserById = async (
 export const deleteUserById = async (id: string): Promise<IUser | null> => {
   return await User.findByIdAndDelete(id).exec();
 };
+
+// Get User by Email
+export const getUserByEmail = async (email: string): Promise<IUser | null> => {
+  return await User.findOne({ email: email }).exec();
+};

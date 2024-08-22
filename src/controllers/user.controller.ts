@@ -15,6 +15,7 @@ import {
   updateUserType,
   updateUserValidator,
 } from "../validation/user.validation";
+import { encryptPassword } from "../lib/utils/encryption.utils";
 
 /**
  * @desc create a user
@@ -32,6 +33,10 @@ export const createNewUser = asyncHandler(
         message: result.error.issues,
       });
     }
+
+    // take provided password, encrypt it, then supply it in place of original password
+    const encryptedPassword = await encryptPassword(body.password);
+    body.password = encryptedPassword;
 
     const user = await createUser(body);
 
